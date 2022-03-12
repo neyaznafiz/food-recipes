@@ -11,7 +11,6 @@ input.addEventListener("keypress", function (event) {
 document.getElementById('error-message').style.display = 'none'
 
 const searchFood = () => {
-
     const searchField = document.getElementById('search-field')
     const searchText = searchField.value
 
@@ -33,6 +32,9 @@ const searchFood = () => {
             // error handle
             .catch(error => displayError(error))
     }
+    // details display empty wehen new search
+    const detailsEmply = displayMealDetail()
+    detailsEmply.textContent = ''
 }
 
 const displayError = (error) => {
